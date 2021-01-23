@@ -14,8 +14,8 @@ export default async function trailerList() {
   /* Lista de todas as séries */
   const resultsArray = [];
   lists.forEach((item) => {
-    item.itens.results.forEach((item) => {
-      resultsArray.push(item);
+    item.itens.results.forEach((result) => {
+      resultsArray.push(result);
     });
   });
 
@@ -54,12 +54,5 @@ export default async function trailerList() {
       overlayGeral.classList.remove("ativo");
       boxTrailer.innerHTML = "";
     }
-  })
-
-  // resultsArray.forEach(result => {
-  //   const trailer = listAll().then(response => response.getInfo(result.id, 'tv'));
-  //   trailer.then(jsonDados => {
-  //     console.log(jsonDados)
-  //   })
-  // })
+  });
 }
