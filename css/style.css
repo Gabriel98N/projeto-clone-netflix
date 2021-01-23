@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #141414;
+  color: #fff
+}
+
+a {
+  text-decoration: none
+}
+
+ul {
+  list-style: none
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block
+}
+
+.overlay-geral {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+  cursor: pointer
+}
+
+.overlay-geral.ativo {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(0, 0, 0, .70)
+}
+
+.overlay-vertical,
+.overlay-horizontal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.overlay-vertical {
+  background: linear-gradient(to top, #141414 10%, transparent 90%)
+}
+
+.overlay-horizontal {
+  background: linear-gradient(to right, #141414 30%, transparent 70%)
+}
+
+.estrutura {
+  opacity: 1;
+  transition: all .3s ease
+}
+
+.introducao {
+  height: 100vh
+}
+
+.header {
+  height: 80px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  background: linear-gradient(to bottom, #111 10%, transparent 90%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: all .3s ease
+}
+
+.header.black {
+  background: #141414
+}
+
+.logo {
+  width: 120px
+}
+
+.logo img {
+  width: 100%
+}
+
+.menu {
+  display: flex
+}
+
+.menu li {
+  margin-left: 15px
+}
+
+.menu li a {
+  color: #fff;
+  font-size: .845rem;
+  transition: all .3s ease
+}
+
+.menu li a:hover {
+  color: #949494
+}
+
+.menu-hamburguer {
+  display: none;
+}
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  padding-bottom: 150px;
+  z-index: 1;
+  max-width: 700px;
+  height: calc(100% - 80px);
+  margin-top: 80px
+}
+
+.destaque h1 {
+  font-size: 4rem;
+  line-height: 60px;
+  margin-bottom: 15px
+}
+
+.infos {
+  display: flex
+}
+
+.infos p {
+  margin-right: 15px;
+  font-weight: 700;
+  font-size: .845rem
+}
+
+.infos p:nth-of-type(1) {
+  color: #46d369
+}
+
+.descricao {
+  margin: 15px 0
+}
+
+.descricao p {
+  font-size: 1.125rem;
+  line-height: 1.4
+}
+
+.div-buttons {
+  margin-bottom: 15px
+}
+
+.div-buttons button {
+  padding: 12px 30px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 0
+}
+
+.div-buttons button:hover {
+  opacity: .9
+}
+
+.container-listas {
+  overflow: hidden;
+  margin-top: -150px
+}
+
+.catalago {
+  margin-bottom: 30px;
+  position: relative
+}
+
+.catalago h2 {
+  margin-bottom: 15px;
+  margin-left: 60px;
+  font-size: 1.5rem
+}
+
+.img-capa {
+  display: flex;
+  transition: all .3s ease;
+  overflow-x: auto
+}
+
+.img-capa::-webkit-scrollbar {
+  height: 15px;
+  background: #141414
+}
+
+.img-capa::-webkit-scrollbar-thumb {
+  background: #000;
+  border-top: 4px solid #141414;
+  border-bottom: 4px solid #141414
+}
+
+.img-capa::-webkit-scrollbar-track {
+  background: #141414
+}
+
+.img-capa img {
+  width: 100%;
+  transform: scale(.9);
+  transition: all .3s ease;
+  border-radius: 3px;
+  cursor: pointer
+}
+
+.img-capa img:hover {
+  transform: scale(1)
+}
+
+.trailer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(145deg, #1b1a1b 50%, rgba(21, 19, 21, .50));
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 30px, 0);
+  transition: all .5s ease;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.trailer.ativo {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0)
+}
+
+.trailer div {
+  max-width: 550px;
+  margin-left: 30px;
+  align-self: flex-start
+}
+
+.trailer div h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 36px;
+}
+
+.trailer div p {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.trailer img {
+  height: 300px;
+  border-radius: 3px
+}
+
+.trailer button {
+  width: 180px;
+  padding: 12px 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 0
+}
+
+.trailer button:hover {
+  opacity: .9
+}
+
+.footer {
+  padding: 30px;
+  text-align: center
+}
+
+.footer span {
+  color: #DD0914
+}
+
+.footer a {
+  color: #949494;
+  font-weight: 700
+}
+
+@media (max-width: 740px) {
+  .header {
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    z-index: 1000;
+    background-color: #141414;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s ease;
+  }
+
+  .menu.ativo {
+    left: 0;
+  }
+
+  .menu li {
+    margin: 0 0 30px 0;
+  }
+
+  .menu li a {
+    font-size: 2.5rem;
+  }
+
+  .menu-hamburguer {
+    width: 25px;
+    height: 23px;
+    display: block;
+    z-index: 2000;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .mobile {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 43%;
+    border-radius: 30px;
+    transition: all .3s ease;
+  }
+
+  .mobile::before,
+  .mobile::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    border-radius: inherit;
+  }
+
+  .mobile::before {
+    bottom: -7px;
+    left: 0;
+  }
+
+  .mobile::after {
+    top: -7px;
+    left: 0;
+  }
+
+  .mobile.ativo {
+    transform: rotate(90deg);
+    background: transparent;
+  }
+
+  .mobile.ativo::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  .mobile.ativo::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .destaque {
+    padding: 0 15px 150px
+  }
+
+  .destaque h1 {
+    font-size: 2.5rem;
+    line-height: 40px;
+  }
+
+  .descricao p,
+  .trailer div p {
+    font-size: .845rem;
+  }
+
+  .catalago h2 {
+    margin-left: 15px
+  }
+
+  .div-buttons button {
+    margin: 15px 0 0;
+    display: block
+  }
+
+  .trailer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 15px;
+  }
+
+  .trailer div {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0 0
+  }
+
+  .trailer div h2 {
+    font-size: 1.5rem;
+    line-height: 25px
+  }
+
+  .trailer div p {
+    max-width: 350px
+  }
+}
