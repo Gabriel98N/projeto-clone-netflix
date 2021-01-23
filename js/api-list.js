@@ -61,7 +61,6 @@ export default async function listAll() {
         info = await fecthAPI(`/movie/${id}?language=pt-BR&api_key=${API}`);
       } else if (type === 'tv') {
         info = await fecthAPI(`/tv/${id}?language=pt-BR&api_key=${API}`);
-        info.trailer = await fecthAPI(`/tv/${id}/videos?api_key=${API}&language=pt-BR`)
       }
     }
     return info;
