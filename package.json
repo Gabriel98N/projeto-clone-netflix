@@ -1,0 +1,27 @@
+{
+  "name": "site-2020.10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch  --config webpack-config-dev.js",
+    "build": "webpack --config webpack-config-build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "eslint-config-prettier": "^7.1.0",
+    "whatwg-fetch": "^3.5.0"
+  }
+}
