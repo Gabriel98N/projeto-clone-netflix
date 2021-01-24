@@ -15,7 +15,7 @@ async function getList() {
   const introducao = document.querySelector(".introducao");
   const destaque = document.querySelector(".destaque");
 
-  /* Pegando os originais netflix */
+  /* Pegando os recomendados para você netflix */
   const originals = listsAll.filter((item) => item.slug === "originals");
   const random = Math.floor(Math.random() * originals[0].itens.results.length - 1);
   const imgEscolhido = originals[0].itens.results[random];

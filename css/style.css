@@ -415,6 +415,10 @@ video {
     padding: 0 15px;
   }
 
+  .img-capa img {
+    width: 150px;
+  }
+
   .trailer {
     flex-direction: column;
     align-items: flex-start;
